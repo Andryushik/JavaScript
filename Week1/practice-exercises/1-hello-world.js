@@ -10,3 +10,4 @@
  *   Hola, mundo! // Spanish
  */
 
+console.log('Привет МИР!') //Russian

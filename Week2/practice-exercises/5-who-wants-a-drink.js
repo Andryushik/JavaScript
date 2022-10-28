@@ -19,7 +19,7 @@ for (let i = 0; i < 5; i++) {
   drinkTray.push(drinkTypes[n]);
   n++;
 }
-console.log(`Hey guys! I brought a ${drinkTray}!`.replace(/,/g, ', '));
+console.log(`Hey guys, I brought a ${drinkTray.join(', ')}!`);
 
 // Another version with rendom function
 
@@ -29,4 +29,4 @@ for (let i = 0; i <5; i++) {
   let n = Math.floor(Math.random() * 3);
   drinkTray.push(drinkTypes[n]);
 };
-console.log(`Hey guys, I brought a ${drinkTray}!`.replace(/,/g, ', '));
+console.log(`Hey guys, I brought a ${drinkTray.join(', ')}!`);

@@ -37,3 +37,21 @@ The traffic light is on green
 The traffic light is on orange
 The traffic light is on red
 */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//Shortest solution for traffic light exercise
+'use strict';
+const trafficLight = {
+  possibleStates: ['green', 'orange', 'red'],
+};
+
+for (let cycle = 0; cycle < 2; cycle++) {
+  for (
+    trafficLight.stateIndex = 0;
+    trafficLight.stateIndex <= 2;
+    trafficLight.stateIndex++
+  ) {
+    const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
+    console.log('The traffic light is on', currentState);
+  }
+}

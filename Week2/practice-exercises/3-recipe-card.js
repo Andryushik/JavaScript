@@ -12,3 +12,12 @@
  *   Ingredients: 4 eggs, 2 strips of bacon, 1 tsp salt/pepper
  */
 
+const mealRecipe = {
+  mealName: 'Omelette',
+  serves: 2,
+  ingredients: ['eggs', 'bacon', 'salt', 'peppere', 'milk']
+};
+
+for (const property in mealRecipe) {
+  console.log(`${property}: ${mealRecipe[property]}`);
+}

@@ -7,7 +7,8 @@
 
 let myString = 'hello,this,is,a,difficult,to,read,sentence';
 
-
+myString = myString.replace(/,/g, ' ');
+//"g" means to all symbols in the string not only the first one
 
 /* --- Code that will test your solution, do NOT change. Write above this line --- */
 

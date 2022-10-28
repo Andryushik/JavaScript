@@ -8,4 +8,25 @@
  */
 
 // There are 3 different types of drinks:
+
 const drinkTypes = ['cola', 'lemonade', 'water'];
+const drinkTray = [];
+let n = 0;
+for (let i = 0; i < 5; i++) {
+  if (n > 2) {
+    n = 0;
+  }
+  drinkTray.push(drinkTypes[n]);
+  n++;
+}
+console.log(`Hey guys! I brought a ${drinkTray}!`.replace(/,/g, ', '));
+
+// Another version with rendom function
+
+const drinkTypes = ['cola', 'lemonade', 'water'];
+const drinkTray = [];
+for (let i = 0; i <5; i++) {
+  let n = Math.floor(Math.random() * 3);
+  drinkTray.push(drinkTypes[n]);
+};
+console.log(`Hey guys, I brought a ${drinkTray}!`.replace(/,/g, ', '));

@@ -15,9 +15,9 @@
 const mealRecipe = {
   mealName: 'Omelette',
   serves: 2,
-  ingredients: ['eggs', 'bacon', 'salt', 'peppere', 'milk']
+  ingredients: ['eggs', 'bacon', 'salt', 'pepper', 'milk'],
 };
 
 for (const property in mealRecipe) {
-  console.log(`${property}: ${mealRecipe[property]}`);
+  console.log(`${property}: ${mealRecipe[property]}`.replace(/,/g, ', ')); //changing ','  to ', + space' for beauty in array elements
 }

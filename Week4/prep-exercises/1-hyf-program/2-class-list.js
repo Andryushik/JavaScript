@@ -20,7 +20,7 @@ const getPeopleOfClass = (className) => {
     peopleOfClass.push({ name: student.name, role: 'student' }),
   );
   const moduleName = classes.find(
-    (clasS) => clasS.name == className,
+    (classN) => classN.name == className,
   ).currentModule;
   const mentorsOfClass = mentors.filter(
     (mentor) => mentor.nowTeaching == moduleName,
@@ -44,8 +44,17 @@ console.log(getPeopleOfClass('class34'));
  *    class35: [{ name: 'Jane', role: 'student' }, { name: 'Steve', role: 'mentor' }]
  *  }
  */
+
 const getActiveClasses = () => {
-  // TODO complete this function
+  const getActiveClassesArray = [];
+  const getActiveClasses = {};
+  const getActive = classes.filter((classN) => classN.active == true);
+  getActive.forEach((classN) => getActiveClassesArray.push(classN.name));
+  //getActiveClassesArray.reduce((acc, classN) => ({ ...acc, classN: [] }));
+
+  console.log(getActiveClassesArray);
+  console.log(getActiveClasses);
+  return getActiveClasses;
 };
-// You can uncomment out this line to try your function
-// console.log(getActiveClasses());
+
+console.log(getActiveClasses());

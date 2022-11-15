@@ -46,14 +46,20 @@ console.log(getPeopleOfClass('class34'));
  */
 
 const getActiveClasses = () => {
-  const getActiveClassesArray = [];
-  const getActiveClasses = {};
-  const getActive = classes.filter((classN) => classN.active == true);
-  getActive.forEach((classN) => getActiveClassesArray.push(classN.name));
-  //getActiveClassesArray.reduce((acc, classN) => ({ ...acc, classN: [] }));
-
-  console.log(getActiveClassesArray);
-  console.log(getActiveClasses);
+  const getActiveClasses = () => {
+    const getActiveClassesTemp = {};
+    const getActive = classes.filter((classN) => classN.active == true);
+    getActive.forEach(
+      (classN) =>
+        (getActiveClassesTemp[classN.name] = getPeopleOfClass(classN.name)),
+    );
+    return getActiveClassesTemp;
+  };
+  // Another method
+  // const activeClasses = {};
+  // for (const item of classes) {
+  //   if (item.active) activeClasses[item.name] = getPeopleOfClass(item.name);
+  // }
   return getActiveClasses;
 };
 
